@@ -37,13 +37,15 @@ var Account = mongoose.model('Account', AccountSchema);
 var router = express.Router();
 
 router.get('/', function(req, res) {
-    res.json({ message: 'we\'re in!' });
+    res.status(200).json({ message: 'we\'re in!' });
 });
 
 router.get('/about', function(req, res) {
-    res.json({ "author" : "Roland Zeng", "source" : "tba" });
+    res.status(200).json({ "author" : "Roland Zeng", "source" : "tba" });
 });
 
+//GET localhost:5000/account should list all accounts 
+//POST localhost:5000/account with params 'name' and 'bob' should add bob as an account and return bob's new account ID 
 router.route('/account')
   .get(function(req,res){
     Account.find(function(err, accounts) {
@@ -75,6 +77,7 @@ router.route('/account')
     });
   });
 
+//GET localhost:5000/account/bob should return all of bob's characters
 router.route('/account/:acc_name')
   .get(function(req,res){
     Account.find({'account_name': req.params.acc_name}, function(err,match){
