@@ -9,7 +9,7 @@ app.set('port', (process.env.PORT || 5000));
 
 //MONGOOSE DATABASE SETUP (linked with remote mongodb using mongolab)
 var mongoose = require('mongoose');
-var CREDENTIALS = 'rzeng:reverse';
+var CREDENTIALS = process.env.credentials;
 mongoose.connect('mongodb://' + CREDENTIALS + '@ds053784.mongolab.com:53784/blizzard_api_db');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
