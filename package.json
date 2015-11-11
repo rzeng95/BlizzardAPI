@@ -1,0 +1,11 @@
+{
+  "name": "blizzardAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+      "express": "latest",
+      "mongoose": "latest",
+      "body-parser": "latest"
+  }
+}
