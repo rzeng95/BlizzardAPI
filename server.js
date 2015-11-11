@@ -6,11 +6,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 5000));
 
-
-var credentials = 'rzeng:reverse';
-
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://' + credentials + '@ds053784.mongolab.com:53784/blizzard_api_db');
+mongoose.connect('mongodb://' + process.env.credentials + '@ds053784.mongolab.com:53784/blizzard_api_db');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
