@@ -4,7 +4,7 @@
 http://blizzardAPI.herokuapp.com
 
 ####Summary:
-I used NodeJS with MongoDB to simulate a World of Warcraft API that stores account and character data. I only implemented the technical specs (exposing each API command). I did not implement the rules (race-class compatibility, level bounding, etc.) since those would have taken much longer. It is for this same reason that I have not implemented any capitalization-checking - Please make sure your API calls use the same lower/uppercase when setting/searching for names.
+I used NodeJS's ExpressJS framework with MongooseJS (MongoDB) to simulate a World of Warcraft API that stores account and character data. I only implemented the technical specs (exposing each API command). I did not implement the rules (race-class compatibility, level bounding, etc.) since those would have taken much longer. It is for this same reason that I have not implemented any capitalization-checking - Please make sure your API calls use the same lower/uppercase when setting/searching for names.
 
 The full spec is attached under Blizzard_Automation_API_Spec.txt
 
