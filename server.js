@@ -39,7 +39,7 @@ var Character = mongoose.model('Character', CharacterSchema);
 var router = express.Router();
 
 router.get('/', function(req, res) {
-    res.status(200).json({ message: 'we\'re in!' });
+    res.status(200).send('Hello! Source code & getting started: https://github.com/rzeng95/blizzardAPI');
 });
 
 router.get('/about', function(req, res) {
